@@ -27,6 +27,9 @@ Version 3.1.0 (2019-XX-XX)
 - fix issue where it was possible to add an index to an existing dataset by using update functions and partition indices
   (https://github.com/JDASoftwareGroup/kartothek/issues/16).
 
+- fix issue where unreferenced files were not being removed when deleting an entire dataset and create test
+  :func:`kartothek.io.testing.delete.test_delete_dataset_unreferenced_files`
+
 **Breaking:**
 
 - categorical normalization was moved from :meth:`~kartothek.core.common_metadata.make_meta` to
