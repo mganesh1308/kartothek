@@ -1,5 +1,4 @@
 #!/bin/bash
-
 set -xeo pipefail
 
 echo "uninstalling numpy and pandas"
