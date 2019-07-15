@@ -20,6 +20,8 @@ before_install:
 install:
   - pip install -r test-requirements-pinned.txt
   - pip install --no-deps dist/*
+
+after_install:
   - ./it_requirements.sh
 
 
