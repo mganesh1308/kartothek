@@ -15,13 +15,13 @@ matrix:
   include:
   - dist: xenial
     env:
-      - PYTHON=3.6 PANDAS="MASTER"
+      PANDAS="MASTER"
 
 before_install:
   - pip install --upgrade pip
   - pip install pip-tools
   - ./compile_requirements.sh
-  - if [[ "$PYTHON" == "3.6" AND "$PANDAS" == "MASTER" ]]; then
+  - if [[ "$PANDAS" == "MASTER" ]]; then
       ./it_requirements.sh
     fi
   - python setup.py bdist_wheel
