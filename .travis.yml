@@ -12,16 +12,18 @@ env:
   - KARTOTHEK_ARROW_VERSION=0.13.0
 
 matrix:
+if: branch = numpan_nightly
   include:
   - dist: xenial
     env:
-      PANDAS="MASTER"
+      - BRANCH="DEV"
+
 
 before_install:
   - pip install --upgrade pip
   - pip install pip-tools
   - ./compile_requirements.sh
-  - if [[ "$PANDAS" == "MASTER" ]]; then
+  - if [[ "$BRANCH" == "DEV" ]]; then
     ./it_requirements.sh;
     fi
   - python setup.py bdist_wheel
