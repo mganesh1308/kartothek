@@ -15,7 +15,7 @@ env:
 matrix:
   include:
     - name: "integration tests"
-      if: branch=numpan_nightly
+      if: branch=master
       env: RUN_INTEGRATION="true"
 
 before_install:
