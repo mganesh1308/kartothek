@@ -22,7 +22,7 @@ before_install:
   - pip install pip-tools
   - ./compile_requirements.sh
   - if [[ "$PANDAS" == "MASTER" ]]; then
-      ./it_requirements.sh
+    ./it_requirements.sh
     fi
   - python setup.py bdist_wheel
 
