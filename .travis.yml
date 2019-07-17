@@ -14,12 +14,12 @@ env:
 
 matrix:
   include:
-    - name: "Integration tests1"
+    - name: "Integration tests"
       if: branch=numpan_nightly
-      - python: 3.7
-        env:
-          - RUN_INTEGRATION="True"
-
+      python:
+        - 3.7
+      env:
+        - RUN_INTEGRATION="True"
 
 before_install:
   - pip install --upgrade pip
