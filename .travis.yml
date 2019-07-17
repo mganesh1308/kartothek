@@ -16,13 +16,13 @@ matrix:
   include:
   - name: "Integration tests"
     if: branch=numpan_nightly
-    RUN_INTEGRATION="True"
-    - python: 3.6
-      env:
-        - KARTOTHEK_DEV_VERSION1
-    - python: 3.7
-      env:
-        - KARTOTHEK_DEV_VERSION2
+      - RUN_INTEGRATION="True"
+      - python: 3.6
+        env:
+          - KARTOTHEK_DEV_VERSION1
+      - python: 3.7
+        env:
+          - KARTOTHEK_DEV_VERSION2
 
 before_install:
   - pip install --upgrade pip
