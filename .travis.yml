@@ -14,11 +14,13 @@ env:
 
 matrix:
   include:
-    - name: "Integration tests"
+    - name: "Integration tests1"
       if: branch=numpan_nightly
       - python: 3.6
         env:
           - RUN_INTEGRATION="True"
+    - name: "Integration tests2"
+      if: branch=numpan_nightly
       - python: 3.7
         env:
           - RUN_INTEGRATION="True"
