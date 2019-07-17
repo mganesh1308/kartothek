@@ -14,7 +14,7 @@ env:
 
 matrix:
   include:
-    - name: "integration tests"
+    - name: "Integration tests"
       if: branch=numpan_nightly
       env:
         - RUN_INTEGRATION="True"
@@ -27,7 +27,7 @@ before_install:
 
 install:
   - pip install -r test-requirements-pinned.txt
-  - if [[ "$BRANCH" == "DEV" ]]; then ./set_integration_test_requirements.sh; fi
+  - if [[ "$RUN_INTEGRATION" == "True" ]]; then ./set_integration_test_requirements.sh; fi
   - pip install --no-deps dist/*
 
 
