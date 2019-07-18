@@ -21,22 +21,7 @@ matrix:
       python: "3.7"
       env:
         - NUMPY_PANDAS_INTEGRATION=1
-        - RUN_INTEGRATION="True"
-      before_script:
-        - if [ NUMPY_PANDAS_INTEGRATION != "1" ]; then exit; fi
-        -./tests/integration/numpy_pandas_integration_test.sh
-    - name: "Integration test for PyArrow"
-      if: branch=numpan_nightly
-      language: python
-      python: "3.7"
-      env:
-        - PYARROW_INTEGRATION=1
-        - RUN_INTEGRATION="True"
-      before_script:
-        - if [ PYARROW_INTEGRATION != "1" ]; then exit; fi
-        -./tests/integration/pyarrow_integration_test.sh
-      script:
-        - python pyarrow_integration_test.py
+
 
 before_install:
   - pip install --upgrade pip
@@ -46,7 +31,7 @@ before_install:
 
 install:
   - pip install -r test-requirements-pinned.txt
-  - if [[ "$RUN_INTEGRATION" == "True" ]]; then ./set_integration_test_requirements.sh; fi
+  - if [[ "$NUMPY_PANDAS_INTEGRATION" == "1" ]]; then ./tests/integration/numpy_pandas_integration_test.sh; fi
   - pip install --no-deps dist/*
 
 
