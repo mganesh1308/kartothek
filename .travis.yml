@@ -19,11 +19,6 @@ matrix:
     python: "3.7"
     env:
       - PYARROW_INTEGRATION=1
-  - name: "Integration test for Numpy Pandas"
-    if: branch=numpan_nightly
-    python: "3.7"
-    env:
-      - NUMPY_PANDAS_INTEGRATION=1
 
 
 before_install:
