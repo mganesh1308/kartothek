@@ -20,16 +20,16 @@ matrix:
     env:
       - NUMPY_PANDAS_INTEGRATION=1
     before_script:
-      -./ci/before_script.sh
-      -./ci/set_numpy_pandas_integration.sh
+      - ./ci/before_script.sh
+      - ./ci/set_numpy_pandas_integration.sh
   - name: "Integration test for PyArrow"
     if: branch=numpan_nightly
     python: "3.7"
     env:
       - PYARROW_INTEGRATION=1
     before_script:
-      -./ci/before_script.sh
-      -./ci/set_pyarrow_integration.sh
+      - ./ci/before_script.sh
+      - ./ci/set_pyarrow_integration.sh
     script:
       - python ./tests/integration/pyarrow_integration_test.py
 
