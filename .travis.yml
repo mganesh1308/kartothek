@@ -53,7 +53,8 @@ script:
   - pytest --cov kartothek --cov-report xml --cov-report html
 
 after_success:
-  - pip install codecov  - codecov
+  - pip install codecov
+  - codecov
 
 deploy:
   provider: pypi
