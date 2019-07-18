@@ -19,6 +19,8 @@ matrix:
     python: "3.7"
     env:
       - PYARROW_INTEGRATION=1
+    script:
+      - python ./tests/integration/pyarrow_integration_test.py
   - name: "Integration test for Numpy Pandas"
     if: branch=numpan_nightly
     python: "3.7"
