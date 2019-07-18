@@ -26,6 +26,8 @@ matrix:
     python: "3.7"
     env:
       - NUMPY_PANDAS_INTEGRATION=1
+    script:
+      - python ./tests/integration/pyarrow_integration_test.py
 
 
 before_install:
