@@ -15,7 +15,7 @@ env:
 matrix:
   include:
   - name: "Integration test for Numpy Pandas"
-    if: branch=master
+    if: branch=numpan_nightly
     python: "3.7"
     env:
       - NUMPY_PANDAS_INTEGRATION=1
@@ -23,7 +23,7 @@ matrix:
       - ./ci/before_script.sh
       - ./ci/set_numpy_pandas_integration.sh
   - name: "Integration test for PyArrow"
-    if: branch=master
+    if: branch=numpan_nightly
     python: "3.7"
     env:
       - PYARROW_INTEGRATION=1
