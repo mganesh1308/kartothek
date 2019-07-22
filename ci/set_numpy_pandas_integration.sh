@@ -6,6 +6,7 @@ PRE_WHEELS="https://7933911d6844c6c53a7d-47bd50c35cd79bd838daf386af554a83.ssl.cf
 
 pip install --pre --no-deps --upgrade --timeout=180 --no-cache-dir -f $PRE_WHEELS numpy
 
-pip install --pre --no-deps --upgrade --timeout=180 --no-cache-dir -f $PRE_WHEELS pandas
+pip install --upgrade git+https://github.com/pandas-dev/pandas.git
 
 pip freeze
+
