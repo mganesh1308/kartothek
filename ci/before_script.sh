@@ -1,4 +1,6 @@
 #!/bin/bash
+
+set -xeo pipefail
   
 pip freeze
 
