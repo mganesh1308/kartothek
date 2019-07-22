@@ -9,4 +9,3 @@ pip install --pre --no-deps --upgrade --timeout=180 --no-cache-dir -f $PRE_WHEEL
 pip install --upgrade git+https://github.com/pandas-dev/pandas.git
 
 pip freeze
-
