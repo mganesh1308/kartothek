@@ -56,6 +56,14 @@ after_success:
   - pip install codecov
   - codecov
 
+notifications:
+  email:
+    recipients:
+      - ganesh.m@jda.com
+      - usha.nemani@jda.com
+    on_success: never # default: change
+    on_failure: always # default: always
+
 deploy:
   provider: pypi
   user: fjetter
