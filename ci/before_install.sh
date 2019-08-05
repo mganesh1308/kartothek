@@ -5,5 +5,5 @@ set -xeo pipefail
 # https://github.com/JDASoftwareGroup/kartothek/issues/94
 pip install --upgrade pip==19.1.*
 pip install pip-tools
-travis_wait 8 ./ci/compile_requirements.sh
+./ci/compile_requirements.sh
 python setup.py bdist_wheel
