@@ -5,7 +5,7 @@
 .hypothesis/
 .pytest_cache/
 .mypy_cache/
-
+.idea/
 flake8_report.txt
 junit.xml
 requirements-pinned.txt
